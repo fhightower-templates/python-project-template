@@ -2,6 +2,9 @@
 Python Project Template
 ***********************
 
+.. image:: https://travis-ci.org/fhightower/python-project-template.svg?branch=master
+    :target: https://travis-ci.org/fhightower/python-project-template
+
 .. image:: https://pyup.io/repos/github/fhightower/python-project-template/shield.svg
      :target: https://pyup.io/repos/github/fhightower/python-project-template/
      :alt: Updates
