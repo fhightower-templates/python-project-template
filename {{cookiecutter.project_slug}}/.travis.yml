@@ -25,6 +25,7 @@ deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: {{ cookiecutter.pypi_username }}
+  skip_upload_docs: true
   password:
     secure: PLEASE_REPLACE_ME
   on:
