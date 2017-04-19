@@ -60,3 +60,6 @@ target/
 
 # pyenv python configuration file
 .python-version
+
+# Cookie cutter packaging file
+travis_pypi_setup.py
