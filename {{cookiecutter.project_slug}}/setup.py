@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
+
+with open('LICENSE') as license_file:
+    license = license_file.read()
 
 requirements = [
     {%- if cookiecutter.command_line_interface|lower == 'click' %}
@@ -36,11 +39,7 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
-    packages=[
-        '{{ cookiecutter.project_slug }}',
-    ],
-    package_dir={'{{ cookiecutter.project_slug }}':
-                 '{{ cookiecutter.project_slug }}'},
+    packages=find_packages(exclude=('tests', 'docs'))
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
@@ -51,7 +50,7 @@ setup(
     include_package_data=True,
     install_requires=requirements,
 {%- if cookiecutter.open_source_license in license_classifiers %}
-    license="{{ cookiecutter.open_source_license }}",
+    license=license,
 {%- endif %}
     zip_safe=False,
     keywords='{{ cookiecutter.project_slug }}',
