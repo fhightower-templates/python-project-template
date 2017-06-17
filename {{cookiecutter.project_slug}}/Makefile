@@ -92,3 +92,6 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+upstream: ## set the upstream for the repository
+	git remote set-upstream https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git
