@@ -12,6 +12,8 @@ Tests for `{{ cookiecutter.project_slug }}` module.
 import os
 
 import pytest
+
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 {% else %}
 import sys
 import unittest
