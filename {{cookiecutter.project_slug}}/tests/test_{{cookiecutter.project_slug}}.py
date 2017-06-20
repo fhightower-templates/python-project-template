@@ -33,7 +33,7 @@ from {{ cookiecutter.project_slug }} import cli
 @pytest.fixture
 def absolute_path():
     """Return an absolute path (which is useful for running tests)."""
-    # return return os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
+    # return os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
 
 @pytest.fixture
 def response():
