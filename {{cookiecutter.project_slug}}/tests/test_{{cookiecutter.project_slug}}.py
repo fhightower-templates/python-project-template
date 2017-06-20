@@ -9,6 +9,8 @@ Tests for `{{ cookiecutter.project_slug }}` module.
 """
 
 {% if cookiecutter.use_pytest == 'y' -%}
+import os
+
 import pytest
 {% else %}
 import sys
@@ -27,6 +29,11 @@ from {{ cookiecutter.project_slug }} import cli
 
 {% if cookiecutter.use_pytest == 'y' -%}
 @pytest.fixture
+def absolute_path():
+    """Return an absolute path (which is useful for running tests)."""
+    # return return os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
+
+@pytest.fixture
 def response():
     """Sample pytest fixture.
     See more at: http://doc.pytest.org/en/latest/fixture.html
@@ -35,7 +42,7 @@ def response():
     # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
 
 
-def test_content(response):
+def test_content(absolute_path, response):
     """Sample pytest test function with the pytest fixture as an argument.
     """
     # from bs4 import BeautifulSoup
