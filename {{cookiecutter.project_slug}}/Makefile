@@ -96,8 +96,8 @@ install: clean ## install the package to the active Python's site-packages
 upstream: ## set the upstream for the repository
 	git remote set-upstream https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git
 
-init:
+init: ## install the development requirements with pip (related to python2.x)
     pip install -r requirements_dev.txt
 
-init3:
+init3: ## install the development requirements with pip3 (related to python3.x)
     pip3 install -r requirements_dev.txt
