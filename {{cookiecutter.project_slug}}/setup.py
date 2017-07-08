@@ -52,7 +52,7 @@ setup(
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license=license,
 {%- endif %}
-    zip_safe=False,
+    zip_safe=True,
     keywords='{{ cookiecutter.project_slug }}',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
