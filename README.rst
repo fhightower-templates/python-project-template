@@ -5,6 +5,10 @@ Python Project Template
 .. image:: https://travis-ci.org/fhightower/python-project-template.svg?branch=master
     :target: https://travis-ci.org/fhightower/python-project-template
 
+.. image:: https://api.codacy.com/project/badge/Grade/a68b57372238429ca7de8dbfef5d92a6
+    :alt: Codacy Badge
+    :target: https://www.codacy.com/app/fhightower/python-project-template
+
 .. image:: https://pyup.io/repos/github/fhightower/python-project-template/shield.svg
      :target: https://pyup.io/repos/github/fhightower/python-project-template/
      :alt: Updates
@@ -14,8 +18,3 @@ Python Project Template
      :alt: Python 3
 
 This is a template for Python projects based on the wonderful template here: `https://github.com/audreyr/cookiecutter-pypackage/ <https://github.com/audreyr/cookiecutter-pypackage/>`_.
-
-
-.. image:: https://api.codacy.com/project/badge/Grade/a68b57372238429ca7de8dbfef5d92a6
-   :alt: Codacy Badge
-   :target: https://www.codacy.com/app/fhightower/python-project-template?utm_source=github.com&utm_medium=referral&utm_content=fhightower/python-project-template&utm_campaign=badger
