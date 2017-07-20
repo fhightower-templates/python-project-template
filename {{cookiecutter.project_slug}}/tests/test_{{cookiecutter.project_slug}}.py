@@ -11,6 +11,9 @@ Tests for `{{ cookiecutter.project_slug }}` module.
 {% if cookiecutter.use_pytest == 'y' -%}
 import os
 
+{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
+import docopt
+{%- endif %}
 import pytest
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
@@ -18,13 +21,13 @@ from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 import sys
 import unittest
 {%- endif %}
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
-from contextlib import contextmanager
-from click.testing import CliRunner
+
+{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
+import docopt
 {%- endif %}
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
+{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
 from {{ cookiecutter.project_slug }} import cli
 {%- endif %}
 
@@ -51,15 +54,27 @@ def test_content(absolute_path, response):
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
 
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
-def test_command_line_interface():
-    runner = CliRunner()
-    result = runner.invoke(cli.main)
-    assert result.exit_code == 0
-    assert '{{ cookiecutter.project_slug }}.cli.main' in result.output
-    help_result = runner.invoke(cli.main, ['--help'])
-    assert help_result.exit_code == 0
-    assert '--help  Show this message and exit.' in help_result.output
+{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
+@pytest.fixture
+def command_line_args():
+    """Function to simulate command line arguments using docopt."""
+    args = dict()
+
+    # TODO: Add command line arguments here (see: https://github.com/docopt/docopt#api)
+
+    return args
+
+
+def test_command_line_interface(command_line_args):
+    """Test the command line usage of this project."""
+    # TODO: Add more robust testing here
+    with pytest.raises(docopt.DocoptExit) as exc_info:
+        cli.main()
+
+    # get the error message
+    error_message = exc_info.value
+    # make sure the error message contains the expected usage output
+    assert "Usage:" in str(error_message)
 
 {%- endif %}
 {% else %}
@@ -73,7 +88,7 @@ class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
 
     def test_000_something(self):
         pass
-{% if cookiecutter.command_line_interface|lower == 'click' %}
+{% if cookiecutter.command_line_interface|lower == 'docopt' %}
     def test_command_line_interface(self):
         runner = CliRunner()
         result = runner.invoke(cli.main)
