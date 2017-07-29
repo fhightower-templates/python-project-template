@@ -1,7 +1,7 @@
 {% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
-===============================
+*******************************
 {{ cookiecutter.project_name }}
-===============================
+*******************************
 
 {% if is_open_source %}
 .. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
@@ -34,12 +34,12 @@
 {% endif %}
 
 Features
---------
+========
 
 * TODO
 
 Credits
----------
+=======
 
 This package was created with Cookiecutter_ and the `fhightower/python-project-template`_ project template.
 
