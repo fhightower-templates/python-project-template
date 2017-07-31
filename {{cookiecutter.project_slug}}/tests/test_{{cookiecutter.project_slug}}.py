@@ -16,14 +16,9 @@ import docopt
 {%- endif %}
 import pytest
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 {% else %}
 import sys
 import unittest
-{%- endif %}
-
-{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
-import docopt
 {%- endif %}
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
@@ -37,6 +32,7 @@ from {{ cookiecutter.project_slug }} import cli
 def absolute_path():
     """Return an absolute path (which is useful for running tests)."""
     # return os.path.abspath(os.path.join(os.path.dirname(__file__), '.'))
+
 
 @pytest.fixture
 def response():
