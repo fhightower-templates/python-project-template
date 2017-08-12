@@ -4,12 +4,12 @@
 
 Usage:
     # TODO: Add usage instructions here
-    {{cookiecutter.project_slug}}.py ship new <name>...
-    {{cookiecutter.project_slug}}.py ship <name> move <x> <y> [--speed=<kn>]
-    {{cookiecutter.project_slug}}.py ship shoot <x> <y>
-    {{cookiecutter.project_slug}}.py mine (set|remove) <x> <y> [--moored | --drifting]
-    {{cookiecutter.project_slug}}.py (-h | --help)
-    {{cookiecutter.project_slug}}.py --version
+    {{cookiecutter.project_slug}} ship new <name>...
+    {{cookiecutter.project_slug}} ship <name> move <x> <y> [--speed=<kn>]
+    {{cookiecutter.project_slug}} ship shoot <x> <y>
+    {{cookiecutter.project_slug}} mine (set|remove) <x> <y> [--moored | --drifting]
+    {{cookiecutter.project_slug}} (-h | --help)
+    {{cookiecutter.project_slug}} --version
 
 Options:
     -h --help     Show this screen.
