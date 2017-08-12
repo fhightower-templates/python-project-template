@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
+
 """{{cookiecutter.project_name}}.
 
 Usage:
-  # TODO: Add usage instructions here
-  {{cookiecutter.project_slug}} ship new <name>...
-  {{cookiecutter.project_slug}} ship <name> move <x> <y> [--speed=<kn>]
-  {{cookiecutter.project_slug}} ship shoot <x> <y>
-  {{cookiecutter.project_slug}} mine (set|remove) <x> <y> [--moored | --drifting]
-  {{cookiecutter.project_slug}} (-h | --help)
-  {{cookiecutter.project_slug}} --version
+    # TODO: Add usage instructions here
+    {{cookiecutter.project_slug}}.py ship new <name>...
+    {{cookiecutter.project_slug}}.py ship <name> move <x> <y> [--speed=<kn>]
+    {{cookiecutter.project_slug}}.py ship shoot <x> <y>
+    {{cookiecutter.project_slug}}.py mine (set|remove) <x> <y> [--moored | --drifting]
+    {{cookiecutter.project_slug}}.py (-h | --help)
+    {{cookiecutter.project_slug}}.py --version
 
 Options:
-  -h --help     Show this screen.
-  --version     Show version.
-  # TODO: Add options here
-  --speed=<kn>  Speed in knots [default: 10].
-  --moored      Moored (anchored) mine.
-  --drifting    Drifting mine.
+    -h --help     Show this screen.
+    --version     Show version.
+    # TODO: Add options here
+    --speed=<kn>  Speed in knots [default: 10].
+    --moored      Moored (anchored) mine.
+    --drifting    Drifting mine.
 """
 
 from docopt import docopt
