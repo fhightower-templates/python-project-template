@@ -7,18 +7,14 @@ test_{{ cookiecutter.project_slug }}
 
 Tests for `{{ cookiecutter.project_slug }}` module.
 """
-
 {% if cookiecutter.use_pytest == 'y' -%}
-import os
-
-{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
-import docopt
-{%- endif %}
 import pytest
-
 {% else %}
 import sys
 import unittest
+{%- endif %}
+{%- if cookiecutter.command_line_interface|lower == 'docopt' %}
+import docopt
 {%- endif %}
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
