@@ -41,7 +41,7 @@ Features
 Credits
 =======
 
-This package was created with Cookiecutter_ and the `fhightower/python-project-template`_ project template.
+This package was created with Cookiecutter_ and fhightower's `Python project template`_.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`fhightower/python-project-template`: https://github.com/fhightower/python-project-template
+.. _`Python project template`: https://github.com/fhightower-templates/python-project-template
