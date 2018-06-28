@@ -10,4 +10,4 @@ This is a template for Python projects based on the wonderful template here: `ht
 Usage
 =====
 
-``cookiecutter https://github.com/fhightower-templates/python-project-template.git`` 
+``cookiecutter https://gitlab.com/fhightower-templates/python-project-template.git`` 
