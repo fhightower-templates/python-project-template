@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""Tests for `{{ cookiecutter.project_slug }}` module."""
 
-"""
-test_{{ cookiecutter.project_slug }}
-----------------------------------
-
-Tests for `{{ cookiecutter.project_slug }}` module.
-"""
 {% if cookiecutter.use_pytest == 'y' -%}
 import pytest
 {% else %}

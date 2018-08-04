@@ -3,11 +3,8 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
 
 with open('LICENSE') as license_file:
     license = license_file.read()
@@ -35,10 +32,10 @@ setup(
     name='{{ cookiecutter.project_slug }}',
     version='{{ cookiecutter.version }}',
     description="{{ cookiecutter.project_short_description }}",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
-    url='https://github.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}',
+    url='https://{{ cookiecutter.repo_location }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}',
     packages=find_packages(exclude=('tests', 'docs')),
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
