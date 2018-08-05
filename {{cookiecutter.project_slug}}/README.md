@@ -1,5 +1,6 @@
 # {{ cookiecutter.project_name }}
 
+
 {%- if cookiecutter.repo_location == 'github.com' %}
 [![PyPI](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
 [![Build Status](https://travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}.svg?branch=master)](https://travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }})

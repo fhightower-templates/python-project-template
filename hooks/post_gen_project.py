@@ -22,3 +22,6 @@ if __name__ == '__main__':
 
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
+
+    if '{{ cookiecutter.repo_location }}' == 'gitlab.com':
+        remove_file('.travis.yml')
