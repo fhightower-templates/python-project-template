@@ -10,8 +10,8 @@ with open('LICENSE') as license_file:
     license = license_file.read()
 
 requirements = [
-    {%- if cookiecutter.command_line_interface|lower == 'docopt' %}
-    'docopt>=0.6',
+    {%- if cookiecutter.command_line_interface|lower == 'click' %}
+    'click',
     {%- endif %}
     # TODO: put package requirements here
 ]
