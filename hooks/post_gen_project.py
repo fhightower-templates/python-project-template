@@ -22,3 +22,6 @@ if __name__ == '__main__':
 
     if '{{ cookiecutter.repo_location }}' == 'gitlab.com':
         remove_file('.travis.yml')
+
+    if '{{ cookiecutter.repo_location }}' != 'gitlab.com':
+        remove_file('.gitlab-ci.yml')
