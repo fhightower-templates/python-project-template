@@ -82,6 +82,9 @@ start: ## start a virtual environment for this project
 destroy: ## destroy the virtual environment for this project
 	rm -rf ~/.virtualenvs/{{cookiecutter.project_slug}}
 
+venv: ## provide info about the virtual environment for this project
+	echo '. ~/.virtualenvs/{{cookiecutter.project_slug}}/bin/activate'
+
 {% if cookiecutter.use_pypi_deployment_with_travis == 'n' -%}
 upload: clean ## upload the code to pypi
 	python3 setup.py sdist bdist_wheel
