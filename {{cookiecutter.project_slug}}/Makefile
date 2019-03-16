@@ -102,3 +102,8 @@ init: ## install the development requirements with pip (related to python2.x)
 
 init3: ## install the development requirements with pip3 (related to python3.x)
 	pip3 install -r requirements_dev.txt
+
+{% if cookiecutter.use_pypi_deployment_with_travis == 'n' -%}
+upload: clean ## upload the code to pypi
+	python3 setup.py sdist bdist_wheel
+	python3 -m twine upload dist/*{%- endif %}

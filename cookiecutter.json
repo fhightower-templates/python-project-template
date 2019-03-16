@@ -8,8 +8,8 @@
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
   "pypi_username": "{{ cookiecutter.repo_username }}",
   "version": "0.1.0",
-  "use_pytest": "y",
+  "use_pytest": ["y", "n"],
   "command_line_interface": ["Click", "No command-line interface"],
-  "use_pypi_deployment_with_travis": "y",
+  "use_pypi_deployment_with_travis": ["n", "y"],
   "open_source_license": ["MIT license", "BSD license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }
