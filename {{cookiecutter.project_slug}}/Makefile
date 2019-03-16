@@ -57,13 +57,13 @@ test: ## run tests quickly with the default Python
 
 coverage: ## check code coverage quickly with the default Python
 	{% if cookiecutter.use_pytest == 'y' -%}
-		coverage run --source {{ cookiecutter.project_slug }} -m pytest
+		. ~/.virtualenvs/{{cookiecutter.project_slug}}/bin/activate && coverage run --source {{ cookiecutter.project_slug }} -m pytest
 	{% else %}
-		coverage run --source {{ cookiecutter.project_slug }} setup.py test
+		. ~/.virtualenvs/{{cookiecutter.project_slug}}/bin/activate && coverage run --source {{ cookiecutter.project_slug }} setup.py test
 	{% endif %}
-		coverage report -m
-		coverage html
-		$(BROWSER) htmlcov/index.html
+	coverage report -m
+	coverage html
+	$(BROWSER) htmlcov/index.html
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
