@@ -86,6 +86,6 @@ venv: ## provide info about the virtual environment for this project
 	echo '. ~/.virtualenvs/{{cookiecutter.project_slug}}/bin/activate'
 
 {% if cookiecutter.use_pypi_deployment_with_travis == 'n' -%}
-upload: clean ## upload the code to pypi
+pypi: clean ## upload the code to pypi
 	python3 setup.py sdist bdist_wheel
 	python3 -m twine upload dist/*{%- endif %}
