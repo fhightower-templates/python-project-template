@@ -34,6 +34,8 @@ setup(
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
     author_email='{{ cookiecutter.email }}',
     url='https://{{ cookiecutter.repo_location }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}',
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
     packages=find_packages(exclude=('tests', 'docs')),
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
