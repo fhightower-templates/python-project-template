@@ -37,7 +37,7 @@ setup(
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     packages=find_packages(exclude=('tests', 'docs')),
-    {%- if 'no' not in cookiecutter.command_line_interface|lower %}
+    {%- if 'Click' in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main'
