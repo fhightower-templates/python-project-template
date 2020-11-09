@@ -6,10 +6,10 @@ setup(
     packages=[],
     version='0.1.0',
     description='Cookiecutter template for a Python package',
-    author='Audrey Roy Greenfeld',
+    author='Floyd Hightower',
     license='BSD',
-    author_email='aroy@alum.mit.edu',
-    url='https://github.com/audreyr/cookiecutter-pypackage',
+    author_email='floyd.hightower27@gmail.com',
+    url='https://gitlab.com/fhightower-templates/python-project-template',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
         'Development Status :: 4 - Beta',
