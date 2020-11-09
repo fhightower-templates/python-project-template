@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""{{cookiecutter.project_name}}"""
+"""{{cookiecutter.project_name}} CLI interface."""
 
 import click
 
@@ -13,7 +10,7 @@ from .__init__ import __version__ as VERSION
 def main(version):
     """CLI interface for {{cookiecutter.project_slug}}"""
     if version:
-        print("{{ cookiecutter.project_slug }} version: {}".format(VERSION))
+        print(f'{{ cookiecutter.project_slug }} version: {VERSION}')
 
 
 if __name__ == "__main__":
