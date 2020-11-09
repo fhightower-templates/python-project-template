@@ -155,7 +155,7 @@ def test_bake_with_no_console_script(cookies):
 
 
 def test_bake_with_console_script_files(cookies):
-    context = {'command_line_interface': 'click'}
+    context = {'command_line_interface': '"Click" package (https://click.palletsprojects.com/)'}
     result = cookies.bake(extra_context=context)
     project_path, project_slug, project_dir = project_info(result)
     found_project_files = os.listdir(project_dir)
@@ -167,7 +167,7 @@ def test_bake_with_console_script_files(cookies):
 
 
 def test_bake_with_console_script_cli(cookies):
-    context = {'command_line_interface': 'click'}
+    context = {'command_line_interface': '"Click" package (https://click.palletsprojects.com/)'}
     result = cookies.bake(extra_context=context)
     project_path, project_slug, project_dir = project_info(result)
     module_path = os.path.join(project_dir, 'cli.py')

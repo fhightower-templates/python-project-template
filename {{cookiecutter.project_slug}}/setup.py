@@ -7,7 +7,7 @@ with open('README.md') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    {%- if cookiecutter.command_line_interface|lower == 'click' %}
+    {%- if 'Click' in cookiecutter.command_line_interface %}
     'click',
     {%- endif %}
     # TODO: put package requirements here
@@ -37,7 +37,7 @@ setup(
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     packages=find_packages(exclude=('tests', 'docs')),
-    {%- if 'Click' in cookiecutter.command_line_interface|lower %}
+    {%- if 'Click' in cookiecutter.command_line_interface %}
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main'

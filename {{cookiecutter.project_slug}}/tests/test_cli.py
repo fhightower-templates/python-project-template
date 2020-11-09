@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 """Tests for `{{ cookiecutter.project_slug }}` CLI."""
 
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
+{%- if 'Click' in cookiecutter.command_line_interface %}
 import click
 from click.testing import CliRunner
 {%- endif %}
 
-{% if cookiecutter.command_line_interface|lower == 'click' -%}
+{% if 'Click' in cookiecutter.command_line_interface -%}
 from {{ cookiecutter.project_slug }} import cli
 {%- endif %}
 
