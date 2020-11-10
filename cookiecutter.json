@@ -9,6 +9,6 @@
   "pypi_username": "{{ cookiecutter.repo_username }}",
   "version": "0.1.0",
   "use_pytest": "y",
-  "command_line_interface": ["\"Click\" package (https://click.palletsprojects.com/)", "No command-line interface"],
+  "command_line_interface": ["\"Click\" package (https://click.palletsprojects.com/)", "Argparse", "No command-line interface"],
   "open_source_license": ["MIT license", "BSD license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }

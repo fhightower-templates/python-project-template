@@ -1,17 +1,35 @@
-"""{{cookiecutter.project_name}} CLI interface."""
+"""Console script for {{cookiecutter.project_slug}}."""
 
+{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
+import argparse
+{%- endif %}
+import sys
+{%- if 'Click' in cookiecutter.command_line_interface %}
 import click
+{%- endif %}
 
-from .__init__ import __version__ as VERSION
-
-
+{% if 'Click' in cookiecutter.command_line_interface %}
 @click.command()
-@click.option('--version', is_flag=True, help='Print the version of the package')
-def main(version):
-    """CLI interface for {{cookiecutter.project_slug}}"""
-    if version:
-        print(f'{{ cookiecutter.project_slug }} version: {VERSION}')
+def main(args=None):
+    """Console script for {{cookiecutter.project_slug}}."""
+    click.echo("Replace this message by putting your code into "
+               "{{cookiecutter.project_slug}}.cli.main")
+    click.echo("See click documentation at https://click.palletsprojects.com/")
+    return 0
+{%- endif %}
+{%- if cookiecutter.command_line_interface|lower == 'argparse' %}
+def main():
+    """Console script for {{cookiecutter.project_slug}}."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('_', nargs='*')
+    args = parser.parse_args()
+
+    print("Arguments: " + str(args._))
+    print("Replace this message by putting your code into "
+          "{{cookiecutter.project_slug}}.cli.main")
+    return 0
+{%- endif %}
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())  # pragma: no cover
