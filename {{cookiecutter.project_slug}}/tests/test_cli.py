@@ -14,6 +14,10 @@ from {{ cookiecutter.project_slug }} import cli
 
 def test_{{ cookiecutter.project_slug }}_cli():
     runner = CliRunner()
-    result = runner.invoke(cli.main, ['--version'])
+    result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert result.output == '{{ cookiecutter.project_slug }} version: {{ cookiecutter.version }}\n'
+    assert '{{ cookiecutter.project_slug }}.cli.main' in result.output
+
+    help_result = runner.invoke(cli.main, ['--help'])
+    assert help_result.exit_code == 0
+    assert '--help  Show this message and exit.' in help_result.output
