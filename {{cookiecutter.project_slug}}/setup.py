@@ -36,7 +36,7 @@ setup(
     url='https://{{ cookiecutter.repo_location }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}',
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
-    packages=find_packages(exclude=('tests', 'docs')),
+    packages=find_packages(exclude=('tests')),
     {%- if 'Click' in cookiecutter.command_line_interface %}
     entry_points={
         'console_scripts': [
