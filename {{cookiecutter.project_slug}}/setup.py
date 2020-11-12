@@ -6,16 +6,11 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = [
-    {%- if 'Click' in cookiecutter.command_line_interface %}
-    'click',
-    {%- endif %}
-    # TODO: put package requirements here
-]
+with open('requirements.txt') as requirements_file:
+    requirements = requirements_file.read().splitlines()
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
+with open('requirements_dev.txt') as requirements_dev_file:
+    test_requirements = requirements_dev_file.read().splitlines()
 
 {%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',

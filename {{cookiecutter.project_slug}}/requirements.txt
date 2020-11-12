@@ -1,0 +1,3 @@
+{%- if 'Click' in cookiecutter.command_line_interface %}
+click
+{%- endif %}
