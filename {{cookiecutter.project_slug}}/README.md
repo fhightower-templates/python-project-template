@@ -7,7 +7,8 @@
 [![Documentation Status](https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest)](http://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest)
 [![Updates](https://pyup.io/repos/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/shield.svg)](https://pyup.io/repos/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/)
 {%- elif cookiecutter.repo_location == 'gitlab.com' %}
-![Pipeline status](https://gitlab.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/badges/master/build.svg)
+[![pipeline status](https://gitlab.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/badges/master/pipeline.svg)](https://gitlab.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/-/commits/master)
+[![coverage report](https://gitlab.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/badges/master/coverage.svg)](https://gitlab.com/{{ cookiecutter.repo_username }}/{{ cookiecutter.project_slug }}/-/commits/master)
 {%- endif %}
 
 {{ cookiecutter.project_short_description }}
