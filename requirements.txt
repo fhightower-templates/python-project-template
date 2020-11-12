@@ -3,4 +3,3 @@ tox
 cookiecutter>=1.4.0
 pytest-cookies==0.4.0
 pytest-cov
-codecov
