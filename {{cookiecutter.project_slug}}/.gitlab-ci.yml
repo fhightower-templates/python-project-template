@@ -26,6 +26,4 @@ before_script:
 
 test:
   script:
-  - pip install -r requirements_dev.txt
-  - pip install -r requirements.txt
   - tox
