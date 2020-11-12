@@ -1,6 +1,7 @@
 black
 bumpversion
 twine
+tox
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-cov==2.4.0
