@@ -1,6 +1,5 @@
 [run]
 omit =
     .tox/*
-    tests/*
     setup.py
     {{cookiecutter.project_slug}}/*
