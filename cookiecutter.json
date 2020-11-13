@@ -6,7 +6,6 @@
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "project_short_description": "Everything to create a new, Python package.",
-  "pypi_username": "{{ cookiecutter.repo_username }}",
   "version": "0.1.0",
   "use_pytest": "y",
   "command_line_interface": ["\"Click\" package (https://click.palletsprojects.com/)", "Argparse", "No command-line interface"],
