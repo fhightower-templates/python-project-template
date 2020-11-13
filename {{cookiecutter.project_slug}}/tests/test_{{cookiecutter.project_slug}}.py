@@ -11,10 +11,5 @@ import unittest
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 
 
-@pytest.fixture
-def response():
-    return "foo bar"
-
-
 def test_{{ cookiecutter.project_slug }}_initialization():
     assert 1 == 1
