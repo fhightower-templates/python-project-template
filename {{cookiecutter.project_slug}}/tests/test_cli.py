@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """Tests for `{{ cookiecutter.project_slug }}` CLI."""
 
 {%- if 'Click' in cookiecutter.command_line_interface %}
