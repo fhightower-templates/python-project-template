@@ -1,7 +1,7 @@
 {
   "full_name": "Floyd Hightower",
   "email": "floyd.hightower27@gmail.com",
-  "repo_location": "gitlab.com",
+  "repo_location": "github.com",
   "repo_username": "fhightower",
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
