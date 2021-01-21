@@ -2,8 +2,6 @@
 
 from setuptools import setup, find_packages
 
-from {{ cookiecutter.project_slug }} import __version__
-
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
@@ -23,7 +21,6 @@ with open('requirements_dev.txt') as requirements_dev_file:
 
 setup(
     name='{{ cookiecutter.project_slug }}',
-    version=__version__,
     description="{{ cookiecutter.project_short_description }}",
     long_description=readme,
     long_description_content_type="text/markdown",

@@ -160,6 +160,24 @@ def test_bake_not_open_source(cookies):
         assert 'License' not in result.project.join('README.md').read()
 
 
+# def test_version_number(cookies):
+#     with bake_in_temp_dir(cookies) as result:
+#         assert result.project.isdir()
+#         run_inside_dir('git init', str(result.project))
+
+#         run_inside_dir('git add .coveragerc', str(result.project))
+#         run_inside_dir('git commit -m "Foo"', str(result.project))
+#         run_inside_dir('git tag -a v1.4 -m "v1.4"', str(result.project))
+
+#         run_inside_dir('git add .editorconfig', str(result.project))
+#         run_inside_dir('git commit -m "Foo"', str(result.project))
+
+#         run_inside_dir('git tag', str(result.project))
+#         result = run_inside_dir('python setup.py --version', str(result.project))
+#         print(f'result: {result}')
+#         assert result == 'v1.4'
+
+
 def test_using_pytest(cookies):
     with bake_in_temp_dir(
         cookies
