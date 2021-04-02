@@ -8,7 +8,7 @@ setup(
     author='Floyd Hightower',
     license='BSD',
     author_email='floyd.hightower27@gmail.com',
-    url='https://gitlab.com/fhightower-templates/python-project-template',
+    url='https://github.com/fhightower-templates/python-project-template',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
         'Development Status :: 4 - Beta',
