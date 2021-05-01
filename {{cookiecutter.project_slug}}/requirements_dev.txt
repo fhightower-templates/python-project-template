@@ -11,7 +11,5 @@ flake8
 flake8-cognitive-complexity
 mypy
 pylint
-{% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-cov
-{%- endif %}
