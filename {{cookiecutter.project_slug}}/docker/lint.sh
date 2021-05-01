@@ -4,17 +4,17 @@ set -euxo pipefail
 
 echo "Running linters and formatters..."
 
-isort d8s_dates/ tests/
+isort {{cookiecutter.project_slug}}/ tests/
 
-black d8s_dates/ tests/
+black {{cookiecutter.project_slug}}/ tests/
 
-mypy d8s_dates/ tests/
+mypy {{cookiecutter.project_slug}}/ tests/
 
-pylint d8s_dates/*.py
+pylint {{cookiecutter.project_slug}}/*.py
 
-flake8 d8s_dates/ tests/
+flake8 {{cookiecutter.project_slug}}/ tests/
 
-bandit -r d8s_dates/
+bandit -r {{cookiecutter.project_slug}}/
 
 # we run black again at the end to undo any odd changes made by any of the linters above
-black d8s_dates/ tests/
+black {{cookiecutter.project_slug}}/ tests/
