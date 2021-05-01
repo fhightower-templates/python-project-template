@@ -1,2 +1,1 @@
 {%- if 'Click' in cookiecutter.command_line_interface %}click{%- endif %}
-importlib-metadata; python_version < '3.8'
