@@ -14,7 +14,4 @@ pylint
 {% if cookiecutter.use_pytest == 'y' -%}
 pytest
 pytest-cov
-{%- if cookiecutter.repo_location != 'gitlab.com' %}
-codecov
-{%- endif %}
 {%- endif %}
