@@ -1,7 +1,6 @@
 black
 bumpversion
 twine
-tox
 ipython
 bandit
 black; python_version > '3.5'
